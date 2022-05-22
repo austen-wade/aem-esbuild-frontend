@@ -53,4 +53,4 @@ in clientlib.config.js:
 
 `name: 'clientlib-website',`
 
-will use a folder named ui.frontend/src/main/**website** to create ui.frontend/dist/clientlib-**website** (and because it uses the same clientlib.config.js, this will also be created in your ui.apps clientlibs).
+will use a folder named ui.frontend/src/main/**website** to create ui.frontend/dist/clientlib-**website** (and because it uses the same clientlib.config.js as `aem-clientlib-generator`, this will also be created in your ui.apps clientlibs).
