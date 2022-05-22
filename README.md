@@ -1,5 +1,9 @@
 # ui.frontend with esbuild for Adobe Experience Manager development
 
+## Experimental
+
+This has not been developed or tested using an instance of Adobe Experience Manager and extensive testing would be an expected implementation detail before using this in a production website.
+
 ## Features
 
 -   Incredibly fast build times (**~300ms** per clientlib)
