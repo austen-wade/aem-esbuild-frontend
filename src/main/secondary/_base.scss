@@ -1,0 +1,32 @@
+//== Base
+
+html,
+body {
+	margin: 0;
+	font-size: var(--font-size);
+	font-family: var(--font-family);
+	line-height: var(--font-height);
+	color: var(--color-foreground);
+	background: var(--color-background);
+
+	@media (prefers-color-scheme: dark) {
+		color: var(--color-foreground-dark);
+		background: var(--color-background-dark);
+	}
+}
+
+a {
+	color: var(--color-link);
+
+	@media (prefers-color-scheme: dark) {
+		color: var(--color-link-dark);
+	}
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font: inherit;
+}
