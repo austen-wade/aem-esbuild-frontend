@@ -1,4 +1,9 @@
-.cmp-button {}
-.cmp-button__text {}
-.cmp-button__icon {}
+.cmp-button {
+	color: var(--color-background);
+	transform: translate3d(0, 0, 0);
+}
+.cmp-button__text {
+}
+.cmp-button__icon {
+}
 //.cmp-button__icon--myIcon {}

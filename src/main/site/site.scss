@@ -1,33 +1,7 @@
-// Components
-@forward '../components/accordion';
-@forward '../components/form-button';
-@forward '../components/pdfviewer';
-@forward '../components/breadcrumb';
-@forward '../components/form-options';
-@forward '../components/progressbar';
-@forward '../components/button';
-@forward '../components/form';
-@forward '../components/search';
-@forward '../components/carousel';
-@forward '../components/form-text';
-@forward '../components/separator';
-@forward '../components/container';
-@forward '../components/tabs';
-@forward '../components/contentfragmentlist';
-@forward '../components/helloworld';
-@forward '../components/teaser';
-@forward '../components/contentfragment';
-@forward '../components/image';
-@forward '../components/text';
-@forward '../components/download';
-@forward '../components/languagenavigation';
-@forward '../components/title';
-@forward '../components/embed';
-@forward '../components/list';
-@forward '../components/experiencefragment';
-@forward '../components/navigation';
-
 // Styles
 @forward 'styles/container_main';
 @forward 'styles/experiencefragment_footer';
 @forward 'styles/experiencefragment_header';
+
+// Components
+@import '../components/*.scss';

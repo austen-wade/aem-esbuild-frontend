@@ -1,4 +1,6 @@
-.cmp-breadcrumb {}
+.cmp-breadcrumb {
+    color: var(--color-background);
+}
 .cmp-breadcrumb__list {}
 .cmp-breadcrumb__item {}
 .cmp-breadcrumb__item--active {}
