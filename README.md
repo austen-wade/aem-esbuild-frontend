@@ -26,6 +26,7 @@ Currently must be done manually by doing the following:
 -   updating package.json to match this repo's
 -   restructuring folders under src
 -   removing unused files (webpack)
+-   I updated my node version and switched to using pnpm in my pom.xml (more at bottom)
 
 ## Usage
 
@@ -47,3 +48,33 @@ in clientlib.config.js:
 `name: 'clientlib-website',`
 
 will use a folder named ui.frontend/src/main/**website** to create ui.frontend/dist/clientlib-**website** (and because it uses the same clientlib.config.js as `aem-clientlib-generator`, this will also be created in your ui.apps clientlibs).
+
+### My root pom frontend-maven-plugin config
+
+```xml
+<plugin>
+    <groupId>com.github.eirslett</groupId>
+    <artifactId>frontend-maven-plugin</artifactId>
+    <version>${frontend-maven-plugin.version}</version>
+    <configuration>
+        <nodeVersion>v16.15.0</nodeVersion>
+        <npmVersion>8.5.5</npmVersion>
+        <pnpmVersion>7.1.1</pnpmVersion>
+    </configuration>
+    <executions>
+        <execution>
+            <id>install node and npm and pnpm</id>
+            <goals>
+                <goal>install-node-and-npm</goal>
+                <goal>install-node-and-pnpm</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>pnpm install</id>
+            <goals>
+                <goal>pnpm</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+```

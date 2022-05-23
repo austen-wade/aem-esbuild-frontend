@@ -28,6 +28,7 @@ specifiers:
   esbuild-sass-plugin: ^2.2.6
   eslint: ^8.4.1
   eslint-webpack-plugin: ^3.1.1
+  fast-glob: ^3.2.11
   glob-import-loader: ^1.2.0
   html-webpack-plugin: ^5.5.0
   mini-css-extract-plugin: ^2.4.5
@@ -55,6 +56,7 @@ dependencies:
   esbuild-plugin-eslint: 0.0.1_bkgmqfegpds223uqb6tx4brhfy
   esbuild-plugin-glob: 1.1.2_esbuild@0.14.39
   esbuild-sass-plugin: 2.2.6
+  fast-glob: 3.2.11
   postcss-preset-env: 7.6.0_postcss@8.4.14
 
 devDependencies:
