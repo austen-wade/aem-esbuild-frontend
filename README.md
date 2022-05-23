@@ -6,7 +6,7 @@ This has not been developed or tested using an instance of Adobe Experience Mana
 
 ## Features
 
--   Incredibly fast build times (**~300ms** per clientlib)
+-   Incredibly fast build times (**less than 1 second** per clientlib)
 -   Support for multiple clientlibs
 -   Watch features to support quicker development
 -   TypeScript and JavaScript linting (using a TSLint ruleset – driven by ESLint - rules can be adjusted to suit your team's needs).
@@ -20,10 +20,10 @@ This has not been developed or tested using an instance of Adobe Experience Mana
 
 ## Installation
 
-Must be done manually by doing the following, though would love to add to the archetype as a separate module:
+Currently must be done manually by doing the following:
 
--   add esbuilder.mjs
--   swapping package.json
+-   add esbuilder.mjs and globSass.mjs
+-   updating package.json to match this repo's
 -   restructuring folders under src
 -   removing unused files (webpack)
 
