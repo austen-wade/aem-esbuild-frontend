@@ -2,6 +2,9 @@ import esbuild from 'esbuild';
 import fs from 'fs';
 import path from 'path';
 import chokidar from 'chokidar';
+import globSass from './globSass.mjs';
+import clientlibConfig from './clientlib.config.js';
+import { execSync } from 'child_process';
 
 // plugins
 import postcss from 'postcss';
@@ -10,8 +13,7 @@ import autoprefixer from 'autoprefixer';
 import eslint from 'esbuild-plugin-eslint';
 import { sassPlugin } from 'esbuild-sass-plugin';
 import cleanPlugin from 'esbuild-plugin-clean';
-import { execSync } from 'child_process';
-import clientlibConfig from './clientlib.config.js';
+import EsbuildPluginImportGlob from 'esbuild-plugin-import-glob';
 
 const copy = ({ from, to }) => {
 	return {
@@ -46,27 +48,28 @@ const build = async (clientlib) => {
 
 	if (!fs.existsSync(`./src/main/${clientlib}`)) {
 		console.log(
-			`〰 skipping ${clientlib}: ui.frontend/src/main/${clientlib} does not exist.`
+			`〰 skipping clientlib-${clientlib}: ui.frontend/src/main/${clientlib} does not exist.`
 		);
 		return;
 	}
 
 	try {
 		await esbuild.build({
-			entryPoints: [
-				`./src/main/${clientlib}/site.ts`,
-				`./src/main/${clientlib}/site.scss`,
-			],
+			entryPoints: [`./src/main/${clientlib}/site.ts`],
 			bundle: true,
 			outdir: `${outputDirName}/clientlib-${clientlib}`,
 			minify: isProd,
 			metafile: true,
 			plugins: [
+				EsbuildPluginImportGlob.default(),
 				cleanPlugin.default({
 					verbose: false,
 					patterns: [`./${outputDirName}/clientlib-${clientlib}`],
 				}),
 				sassPlugin({
+					precompile: (source, pathname) => {
+						return globSass(source, pathname);
+					},
 					async transform(source) {
 						const { css } = await postcss([
 							autoprefixer,
@@ -86,6 +89,7 @@ const build = async (clientlib) => {
 		});
 	} catch (error) {
 		console.log(error);
+		process.exit(1);
 	}
 
 	const timerEnd = Date.now();
