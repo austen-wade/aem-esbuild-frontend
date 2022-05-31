@@ -9,8 +9,8 @@ This has not been developed or tested using an instance of Adobe Experience Mana
 -   Incredibly fast build times (**less than 1 second** per clientlib)
 -   Support for multiple clientlibs
 -   Watch features to support quicker development
--   TypeScript and JavaScript linting (using a TSLint ruleset – driven by ESLint - rules can be adjusted to suit your team's needs).
--   Full Sass/Scss support (Sass is compiled to CSS via Webpack).
+-   TypeScript and JavaScript linting
+-   Full Sass/SCSS support
 -   Globbing
 
 ## Does not include
@@ -22,7 +22,7 @@ This has not been developed or tested using an instance of Adobe Experience Mana
 
 Currently must be done manually by doing the following:
 
--   add esbuilder.mjs and globSass.mjs
+-   add esbuilder.mjs
 -   updating package.json to match this repo's
 -   restructuring folders under src
 -   removing unused files (webpack)
