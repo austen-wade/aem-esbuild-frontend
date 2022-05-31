@@ -2,7 +2,7 @@ import esbuild from 'esbuild';
 import fs from 'fs';
 import path from 'path';
 import chokidar from 'chokidar';
-import globSass from './globSass.mjs';
+import globSass from 'esbuild-sass-glob';
 import clientlibConfig from './clientlib.config.js';
 import { execSync } from 'child_process';
 
@@ -78,7 +78,7 @@ const build = async (clientlib) => {
 						return css;
 					},
 				}),
-				eslint({ fix: !isWatch }),
+				// eslint({ fix: !isWatch }),
 				copy({
 					from: './src/main/resources',
 					to: `./clientlib-${clientlib}`,
