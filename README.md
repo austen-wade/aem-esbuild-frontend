@@ -22,7 +22,7 @@ This has not been developed or tested using an instance of Adobe Experience Mana
 
 Currently must be done manually by doing the following:
 
--   add esbuilder.mjs and globSass.mjs
+-   add esbuilder.mjs
 -   updating package.json to match this repo's
 -   restructuring folders under src
 -   removing unused files (webpack)
