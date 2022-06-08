@@ -10,7 +10,7 @@ specifiers:
   esbuild-plugin-clean: ^0.9.0
   esbuild-plugin-eslint: ^0.0.1
   esbuild-plugin-import-glob: ^0.1.1
-  esbuild-sass-glob: 1.0.5
+  esbuild-sass-glob: 1.0.8
   esbuild-sass-plugin: ^2.2.6
   eslint: ^8.16.0
   fast-glob: ^3.2.11
@@ -19,7 +19,7 @@ specifiers:
   typescript: ^4.7.2
 
 dependencies:
-  esbuild-sass-glob: 1.0.5
+  esbuild-sass-glob: 1.0.8
   typescript: 4.7.2
 
 devDependencies:
@@ -820,8 +820,8 @@ packages:
       fast-glob: 3.2.11
     dev: true
 
-  /esbuild-sass-glob/1.0.5:
-    resolution: {integrity: sha512-KZFByMRy7/SEg+xFikdGVIXslz42yR94WHhsK+bOCIqJdlp2oUcrUFjujUpPYjauxheFQW5vgWZWA3SFJ2lawQ==}
+  /esbuild-sass-glob/1.0.8:
+    resolution: {integrity: sha512-7LMDYMzsN83bKERzVoeky4K6j5xkzmnYU/lQwWCjsbooNnimc7xgGvUs+bE5mmxw+mMYT4DnedMHrJDuC8HxPw==}
     dependencies:
       fast-glob: 3.2.11
     dev: false
